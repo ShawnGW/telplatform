@@ -1,6 +1,6 @@
 system:
-  tel:
-    properties:
+  properties:
+    tel:
       mapup: /server212/prod/prober/TEL/mapup/
       mapdown: /server212/prod/prober/TEL/mapdown/
       backup-path: /server212/prod/BackupMap/

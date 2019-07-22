@@ -17,7 +17,7 @@ public class TelProberMappingSmallDieParse {
 
 	@Autowired
 	private GetRandomNumber getRandomNumber;
-	public  void Get(File file, HashMap<String, String> waferIdDaResultMap, RawdataInitBean bean, String cp, String op) throws IOException
+	public  void Get(File file,RawdataInitBean bean) throws IOException
 	{
 		LinkedHashMap<String,String> properties=new LinkedHashMap<>();
 		HashMap<Integer,HashMap<Integer,Integer>> siteBinSum=new HashMap<>();
@@ -159,10 +159,12 @@ public class TelProberMappingSmallDieParse {
 				
 			}	
 		}
-		String Test_Start_Time=waferIdDaResultMap.get("testStartTime");
-		String Test_End_Time=waferIdDaResultMap.get("testEndTime");
-		String waferid=waferIdDaResultMap.get("waferid");
-		String slot=waferIdDaResultMap.get("slot");
+//		String Test_Start_Time=waferIdDaResultMap.get("testStartTime");
+		String Test_Start_Time=bean.getDataProperties().get("Test Start Time");
+//		String Test_End_Time=waferIdDaResultMap.get("testEndTime");
+		String Test_End_Time=bean.getDataProperties().get("Test End Time");
+//		String waferid=waferIdDaResultMap.get("waferid");
+//		String slot=waferIdDaResultMap.get("slot");
 		
 		
 		Integer Year1=Integer.valueOf(Test_Start_Time.substring(0, 2));
@@ -181,9 +183,9 @@ public class TelProberMappingSmallDieParse {
 		Test_End_Time="20"+Test_End_Time+getRandomNumber.getRandomNumber(2);
 
 
-		properties.put("Wafer ID", waferid.trim());
-		properties.put("Operator", op);
-		properties.put("CP Process", cp);
+//		properties.put("Wafer ID", waferid.trim());
+//		properties.put("Operator", op);
+//		properties.put("CP Process", cp);
 		properties.put("Test Start Time", Test_Start_Time);
 		properties.put("Test End Time", Test_End_Time);
 		properties.put("Gross Die", "NA");
@@ -199,7 +201,7 @@ public class TelProberMappingSmallDieParse {
 		properties.put("Notch", "NA");
 		properties.put("Retest Rate", "0");
 		properties.put("WF_Size", "NA");
-		properties.put("Slot", String.valueOf(slot));
+//		properties.put("Slot", String.valueOf(slot));
 		properties.put("MinX", String.valueOf(MinX));
 		properties.put("MinY", String.valueOf(MinY));
 		properties.put("MaxX", String.valueOf(maxX));

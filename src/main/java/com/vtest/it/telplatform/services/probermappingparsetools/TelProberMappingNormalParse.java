@@ -29,7 +29,7 @@ public class TelProberMappingNormalParse {
 	private GetRandomNumber getRandomNumber;
 
 	private  final String[] Negative_Coordinate_X={"ffff:-1","fffe:-2","fffd:-3","fffc:-4","fffb:-5","fffa:-6","fff9:-7","fff8:-8","fff7:-9","fff6:-10"};
-	public void Get(File file, RawdataInitBean bean, String op, String cp)throws IOException, ParserConfigurationException, SAXException
+	public void Get(File file, RawdataInitBean bean)throws IOException, ParserConfigurationException, SAXException
 	{
 		LinkedHashMap<String,String> properties=new LinkedHashMap<>();
 		HashMap<Integer,HashMap<Integer,Integer>> siteBinSum=new HashMap<>();
@@ -252,8 +252,8 @@ public class TelProberMappingNormalParse {
 		Test_End_Time="20"+Test_End_Time+getRandomNumber.getRandomNumber(2);
 
 		properties.put("Wafer ID", waferid.trim());
-		properties.put("Operator", op);
-		properties.put("CP Process", cp);
+//		properties.put("Operator", op);
+//		properties.put("CP Process", cp);
 		properties.put("Test Start Time", Test_Start_Time);
 		properties.put("Test End Time", Test_End_Time);
 		properties.put("Gross Die", String.valueOf(passdies+faildies));
