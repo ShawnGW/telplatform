@@ -40,25 +40,25 @@ public class VtptmtInforImpl implements VtptmtInfor {
     }
 
     @Override
-    @Cacheable(cacheNames = {"SystemPropertiesCache"}, key = "#root.methodName")
+    @Cacheable(cacheNames = {"SystemPropertiesCache"}, key = "'tel&'+#root.methodName")
     public ArrayList<CheckItemBean> getCheckItemList() {
         return vtptmtDao.getCheckItemList();
     }
 
     @Override
-    @Cacheable(cacheNames = {"SystemPropertiesCache"}, key = "#root.methodName")
+    @Cacheable(cacheNames = {"SystemPropertiesCache"}, key = "'tel&'+#root.methodName")
     public ArrayList<DataInforToMesBean> getList() {
         return vtptmtDao.getList();
     }
 
     @Override
-    @Cacheable(cacheNames = {"SystemPropertiesCache"}, key = "#root.methodName")
+    @Cacheable(cacheNames = {"SystemPropertiesCache"}, key = "'tel&'+#root.methodName")
     public ArrayList<BinWaferInforBean> getTesterStatus() {
         return vtptmtDao.getTesterStatus();
     }
 
     @Override
-    @Cacheable(cacheNames = {"SystemPropertiesCache"}, key = "#root.methodName+'&'+#tester")
+    @Cacheable(cacheNames = {"SystemPropertiesCache"}, key = "'tel&'+#root.methodName+'&'+#tester")
     public BinWaferInforBean getTesterStatusSingle(String tester) {
         return vtptmtDao.getTesterStatusSingle(tester);
     }
@@ -76,21 +76,21 @@ public class VtptmtInforImpl implements VtptmtInfor {
     }
 
     @Override
-    @Cacheable(cacheNames = {"SystemPropertiesCache"}, key = "#root.methodName")
+    @Cacheable(cacheNames = {"SystemPropertiesCache"}, key = "'tel&'+#root.methodName")
     public MesProperties getProperties() {
         return vtptmtDao.getProperties();
     }
 
     @Override
-    @CacheEvict(cacheNames = {"SystemPropertiesCache"}, key = "'getProperties'")
+    @CacheEvict(cacheNames = {"SystemPropertiesCache"}, key = "'tel&getProperties'")
     public int updateProperties(MesProperties mesProperties) {
         return vtptmtDao.updateProperties(mesProperties);
     }
 
     @Transactional(isolation = Isolation.SERIALIZABLE, propagation = Propagation.REQUIRED)
     @Caching(evict = {
-            @CacheEvict(cacheNames = {"SystemPropertiesCache"}, key = "'getTesterStatusSingle&'+#tester"),
-            @CacheEvict(cacheNames = {"SystemPropertiesCache"}, key = "'getTesterStatus'")
+            @CacheEvict(cacheNames = {"SystemPropertiesCache"}, key = "'tel&getTesterStatusSingle&'+#tester"),
+            @CacheEvict(cacheNames = {"SystemPropertiesCache"}, key = "'tel&getTesterStatus'")
     })
     public void singleWaferDeal(BinWaferInforBean binWaferInforBean, String waferId, String cpProcess, String tester) {
         vtptmtDao.insertWaferInforToBinWaferSummary(binWaferInforBean);

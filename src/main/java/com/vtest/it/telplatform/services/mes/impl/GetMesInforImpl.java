@@ -26,7 +26,7 @@ public class GetMesInforImpl implements GetMesInfor {
     }
 
     @Override
-    @Cacheable(cacheNames = "MesInformationCache",key = "#root.methodName+'&'+#lot")
+    @Cacheable(cacheNames = "MesInformationCache", key = "'tel&'+#root.methodName+'&'+#lot")
     public SlotAndSequenceConfigBean getLotSlotConfig(String lot) {
         SlotAndSequenceConfigBean slotAndSequenceConfigBean= mesDao.getLotSlotConfig(lot);
         SlotAndSequenceConfigBean slotAndSequenceConfigBeanTemp=new SlotAndSequenceConfigBean();
@@ -37,14 +37,14 @@ public class GetMesInforImpl implements GetMesInfor {
     }
 
     @Override
-    @Cacheable(cacheNames = "MesInformationCache",key = "#root.methodName+'&'+#waferId+'&'+#cpProcess")
+    @Cacheable(cacheNames = "MesInformationCache", key = "'tel&'+#root.methodName+'&'+#waferId+'&'+#cpProcess")
     public MesConfigBean getWaferConfigFromMes(String waferId, String cpProcess) {
         MesConfigBean mesConfigBean= mesDao.getWaferConfigFromMes(waferId,cpProcess);
         return null==mesConfigBean?new MesConfigBean():mesConfigBean;
     }
 
     @Override
-    @Cacheable(cacheNames = "MesInformationCache",key = "#root.methodName+'&'+#lot")
+    @Cacheable(cacheNames = "MesInformationCache", key = "'tel&'+#root.methodName+'&'+#lot")
     public CustomerCodeAndDeviceBean getCustomerAndDeviceByLot(String lot) {
         CustomerCodeAndDeviceBean customerCodeAndDeviceBean= mesDao.getCustomerAndDeviceByLot(lot);
         return null==customerCodeAndDeviceBean?new CustomerCodeAndDeviceBean():customerCodeAndDeviceBean;
@@ -56,7 +56,7 @@ public class GetMesInforImpl implements GetMesInfor {
     }
 
     @Override
-    @Cacheable(cacheNames = "MesInformationCache", key = "#root.methodName+'&'+#waferId+'&'+#cpStep")
+    @Cacheable(cacheNames = "MesInformationCache", key = "'tel&'+#root.methodName+'&'+#waferId+'&'+#cpStep")
     public CustomerCodeAndDeviceBean getCustomerAndDeviceByWaferAndCpStep(String waferId, String cpStep) {
         CustomerCodeAndDeviceBean customerCodeAndDeviceBean = mesDao.getCustomerAndDeviceByWaferAndCpStep(waferId, cpStep);
         return null == customerCodeAndDeviceBean ? new CustomerCodeAndDeviceBean() : customerCodeAndDeviceBean;
