@@ -31,7 +31,9 @@ public class TelProberMappingNormalParse {
 	private  final String[] Negative_Coordinate_X={"ffff:-1","fffe:-2","fffd:-3","fffc:-4","fffb:-5","fffa:-6","fff9:-7","fff8:-8","fff7:-9","fff6:-10"};
 	public void Get(File file, RawdataInitBean bean)throws IOException, ParserConfigurationException, SAXException
 	{
-		LinkedHashMap<String,String> properties=new LinkedHashMap<>();
+//		LinkedHashMap<String,String> properties=new LinkedHashMap<>();
+
+		LinkedHashMap<String, String> properties = bean.getDataProperties();
 		HashMap<Integer,HashMap<Integer,Integer>> siteBinSum=new HashMap<>();
 		HashMap<String,String> testDieMap=new HashMap<>();
 		HashMap<String,String> skipAndMarkDieMap=new HashMap<>();
@@ -204,7 +206,7 @@ public class TelProberMappingNormalParse {
 			}
 		}
 		slot=new String(Slot_number_BT, "ASCII");
-		waferid=new String(wafer_id_BT, "ASCII");	
+//		waferid=new String(wafer_id_BT, "ASCII");
 		
         StringBuffer testStartTimeTemp = new StringBuffer(Test_Start_Time_BT.length * 2);  
         for (int i = 0; i < Test_Start_Time_BT.length; i++) {  
@@ -251,7 +253,7 @@ public class TelProberMappingNormalParse {
 		Test_Start_Time="20"+Test_Start_Time+getRandomNumber.getRandomNumber(2);
 		Test_End_Time="20"+Test_End_Time+getRandomNumber.getRandomNumber(2);
 
-		properties.put("Wafer ID", waferid.trim());
+//		properties.put("Wafer ID", waferid.trim());
 //		properties.put("Operator", op);
 //		properties.put("CP Process", cp);
 		properties.put("Test Start Time", Test_Start_Time);
@@ -269,7 +271,7 @@ public class TelProberMappingNormalParse {
 		properties.put("Notch", "NA");
 		properties.put("Retest Rate", "0");
 		properties.put("WF_Size", "NA");
-		properties.put("Slot", String.valueOf(slot));
+//		properties.put("Slot", String.valueOf(slot));
 		properties.put("MinX", String.valueOf(MinX));
 		properties.put("MinY", String.valueOf(MinY));
 		properties.put("MaxX", String.valueOf(maxX));
@@ -281,7 +283,7 @@ public class TelProberMappingNormalParse {
 
 		siteBinSum.put(0,Bin_summary_Map);
 
-		bean.setDataProperties(properties);
+//		bean.setDataProperties(properties);
 		bean.setSiteBinSum(siteBinSum);
 		bean.setTestDieMap(testDieMap);
 		bean.setSkipAndMarkDieMap(skipAndMarkDieMap);

@@ -18,11 +18,11 @@ public class TelPlatformDataDeal {
     private GenerateRawdataInitInformation generateRawdataInitInformation;
     @Autowired
     private GenerateRawdataTemp generateRawdataTemp;
+
     public void deal(ArrayList<DealWaferIdInformationBean> source) {
-        System.out.println(source.size());
         for (DealWaferIdInformationBean bean : source) {
             try {
-                ArrayList<DataParseIssueBean> dataParseIssueBeans = new ArrayList<DataParseIssueBean>();
+                ArrayList<DataParseIssueBean> dataParseIssueBeans = new ArrayList<>();
                 generateRawdata(bean,dataParseIssueBeans);
             } catch (Exception e) {
                 e.printStackTrace();
