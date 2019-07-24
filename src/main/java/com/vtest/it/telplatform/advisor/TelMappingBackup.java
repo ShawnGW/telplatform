@@ -14,8 +14,6 @@ import org.apache.commons.io.FileUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -46,7 +44,6 @@ public class TelMappingBackup {
     private TelOpusProberLotDatParse telOpusProberLotDatParse;
     @Autowired
     private TelOpusProberMappingDaParse telOpusProberMappingDaParse;
-    private static final Logger LOGGER = LoggerFactory.getLogger(TelMappingBackup.class);
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     private SimpleDateFormat simpleDateFormatOthers = new SimpleDateFormat("yyMMddHHmm");
 
@@ -153,7 +150,7 @@ public class TelMappingBackup {
             if (null != lot1File) {
                 try {
                     FileUtils.copyFile(lot1File, new File(mapdown + lotName + "/" + getFileNameAfterModify(lot1File.getName())));
-                    resultMapLot1 = telOpusProberLotDatParse.Get(lot1File);
+                    resultMapLot1 = telOpusProberLotDaParse.get(lot1File);
                     String cpStep = resultMapLot1.get("cp");
                     File destFile = new File(backupPath + customerCode + "/" + device + "/" + lotName + "/" + cpStep + "/LOT/" + lot1File.getName() + "_" + getDateString());
                     FileUtils.copyFile(lot1File, destFile);
@@ -174,6 +171,21 @@ public class TelMappingBackup {
             try {
                 FileUtils.copyFile(waferContFile, destFile);
                 FileUtils.forceDelete(waferContFile);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if (null != formFile) {
+            String cpStep = "NA";
+            try {
+                cpStep = null == resultMapLot2 ? (null == resultMapLot1 ? cpStep : resultMapLot1.get("cp")) : (resultMapLot2.get("cp"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            File destFile = new File(backupPath + customerCode + "/" + device + "/" + lotName + "/" + cpStep + "/FORM/" + formFile.getName() + "_" + getDateString());
+            try {
+                FileUtils.copyFile(formFile, destFile);
+                FileUtils.forceDelete(formFile);
             } catch (IOException e) {
                 e.printStackTrace();
             }
