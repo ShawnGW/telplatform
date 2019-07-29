@@ -169,6 +169,7 @@ public class TelMappingBackup {
             }
             File destFile = new File(backupPath + customerCode + "/" + device + "/" + lotName + "/" + cpStep + "/WAFCONT/" + waferContFile.getName() + "_" + getDateString());
             try {
+                FileUtils.copyFile(waferContFile, new File(mapdown + lotName + "/" + waferContFile.getName()));
                 FileUtils.copyFile(waferContFile, destFile);
                 FileUtils.forceDelete(waferContFile);
             } catch (IOException e) {
@@ -184,6 +185,7 @@ public class TelMappingBackup {
             }
             File destFile = new File(backupPath + customerCode + "/" + device + "/" + lotName + "/" + cpStep + "/FORM/" + formFile.getName() + "_" + getDateString());
             try {
+                FileUtils.copyFile(formFile, new File(mapdown + lotName + "/" + formFile.getName()));
                 FileUtils.copyFile(formFile, destFile);
                 FileUtils.forceDelete(formFile);
             } catch (IOException e) {
