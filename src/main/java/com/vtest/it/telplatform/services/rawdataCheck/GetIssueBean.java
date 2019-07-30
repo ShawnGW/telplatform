@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 @Service
@@ -18,6 +20,7 @@ public class GetIssueBean {
     private String errorPath;
     @Autowired
     private GetMesInfor getMesInfor;
+    private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     public DataParseIssueBean getDataBean(HashMap<String, String> waferInfor, int level, String descripth) {
         DataParseIssueBean dataParseIssueBean = new DataParseIssueBean();
         dataParseIssueBean.setCustomCode(waferInfor.get("customCode"));
@@ -50,8 +53,13 @@ public class GetIssueBean {
         } else {
             dataParseIssueBean.setIssueType("mes information");
         }
-        dataParseIssueBean.setIssuePath(errorPath + "mappingParseError/" + lot + "/" + file.getName());
-        FileUtils.copyFile(file, new File(errorPath + "mappingParseError/" + lot + "/" + file.getName()));
+        String date = getDateString();
+        dataParseIssueBean.setIssuePath(errorPath + "mappingParseError/" + lot + "/" + file.getName() + "_" + date);
+        FileUtils.copyFile(file, new File(errorPath + "mappingParseError/" + lot + "/" + file.getName() + "_" + date));
         return dataParseIssueBean;
+    }
+
+    public String getDateString() {
+        return simpleDateFormat.format(new Date());
     }
 }
