@@ -266,7 +266,7 @@ public class TelMappingBackup {
                 dataProperties.put("CP Process", currentCpStep);
                 dataProperties.put("Test Start Time", testStartTime);
                 dataProperties.put("Test End Time", testEndTime);
-
+                dataProperties.put("Lot ID", lotName);
                 rawdataInitBean.setDataProperties(dataProperties);
                 dealWaferIdInformationBean.setRawdataInitBean(rawdataInitBean);
                 dealWaferIdInformationBean.setFile(destFile);
