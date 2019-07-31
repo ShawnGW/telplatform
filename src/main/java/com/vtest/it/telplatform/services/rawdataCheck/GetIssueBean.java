@@ -46,7 +46,7 @@ public class GetIssueBean {
         waferInfor.put("lot", lot);
         waferInfor.put("cpStep", cpProcess);
         waferInfor.put("waferNo", waferId);
-        waferInfor.put("resource", "TSK");
+        waferInfor.put("resource", "TEL");
         DataParseIssueBean dataParseIssueBean = getDataBean(waferInfor, level, description);
         if (description.equals("there are error in file coding")) {
             dataParseIssueBean.setIssueType("mapping parse");
@@ -54,8 +54,8 @@ public class GetIssueBean {
             dataParseIssueBean.setIssueType("mes information");
         }
         String date = getDateString();
-        dataParseIssueBean.setIssuePath(errorPath + "mappingParseError/" + lot + "/" + file.getName() + "_" + date);
-        FileUtils.copyFile(file, new File(errorPath + "mappingParseError/" + lot + "/" + file.getName() + "_" + date));
+        dataParseIssueBean.setIssuePath(errorPath + "mappingParseError/" + lot + "/" + file.getName());
+        FileUtils.copyFile(file, new File(errorPath + "mappingParseError/" + lot + "/" + file.getName()));
         return dataParseIssueBean;
     }
 

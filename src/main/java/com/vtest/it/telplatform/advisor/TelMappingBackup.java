@@ -387,20 +387,11 @@ public class TelMappingBackup {
             String waferId = information.get("waferId");
             String rightWaferId = waferId;
             if (slotFlag) {
-                if (waferId.contains("-")) {
-                    try {
-                        String tempWaferId = getMesInfor.getWaferIdBySlot(lotName, waferId.split("-")[1]);
-                        rightWaferId = "NA".equals(tempWaferId) ? rightWaferId : tempWaferId;
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                } else {
-                    try {
-                        String tempWaferId = getMesInfor.getWaferIdBySlot(lotName, waferId);
-                        rightWaferId = "NA".equals(tempWaferId) ? rightWaferId : tempWaferId;
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+                try {
+                    String tempWaferId = getMesInfor.getWaferIdBySlot(lotName, waferId.substring(waferId.length() - 2));
+                    rightWaferId = "NA".equals(tempWaferId) ? rightWaferId : tempWaferId;
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
             String currentCpStep = getMesInfor.getCurrentCpStep(rightWaferId);
@@ -424,6 +415,7 @@ public class TelMappingBackup {
                 dataProperties.put("Wafer ID", rightWaferId);
                 dataProperties.put("Operator", operator);
                 dataProperties.put("CP Process", currentCpStep);
+                dataProperties.put("Lot ID", lotName);
                 rawdataInitBean.setDataProperties(dataProperties);
                 dealWaferIdInformationBean.setRawdataInitBean(rawdataInitBean);
                 dealWaferIdInformationBean.setFile(destFile);
