@@ -11,7 +11,7 @@ public class FileTimeCheck {
         File[] datas=file.listFiles();
         for (File data : datas) {
             long fileLastModifyTime=data.lastModified();
-            if (((now-fileLastModifyTime)/1000)<60){
+            if (((now - fileLastModifyTime) / 1000) < 100) {
                 return false;
             }
         }

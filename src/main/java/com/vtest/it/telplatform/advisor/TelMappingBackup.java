@@ -449,15 +449,17 @@ public class TelMappingBackup {
         File[] lots = new File(source).listFiles();
         for (File lot : lots) {
             if (lot.isDirectory() && lot.listFiles().length > 0) {
-                File[] files = lot.listFiles();
-                for (File file : files) {
-                    if (file.getName().endsWith(".DA") && fileTimeCheck.fileTimeCheck(lot)) {
-                        fileNeedDealMap.put(lot, false);
-                        break;
+                if (fileTimeCheck.fileTimeCheck(lot)) {
+                    File[] files = lot.listFiles();
+                    for (File file : files) {
+                        if (file.getName().endsWith(".DA")) {
+                            fileNeedDealMap.put(lot, false);
+                            break;
+                        }
                     }
-                }
-                if (!fileNeedDealMap.containsKey(lot) && fileTimeCheck.fileTimeCheck(lot)) {
-                    fileNeedDealMap.put(lot, true);
+                    if (!fileNeedDealMap.containsKey(lot)) {
+                        fileNeedDealMap.put(lot, true);
+                    }
                 }
             } else {
                 try {
