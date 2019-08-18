@@ -447,7 +447,12 @@ public class TelMappingBackup {
     public Map<File, Boolean> checkEmpty() {
         Map<File, Boolean> fileNeedDealMap = new HashMap<>();
         File[] lots = new File(source).listFiles();
+        long now = System.currentTimeMillis();
         for (File lot : lots) {
+            long lotLastModifyTime = lot.lastModified();
+            if (((now - lotLastModifyTime) / 1000) < 100) {
+                continue;
+            }
             if (lot.isDirectory() && lot.listFiles().length > 0) {
                 if (fileTimeCheck.fileTimeCheck(lot)) {
                     File[] files = lot.listFiles();
