@@ -14,6 +14,8 @@ import org.apache.commons.io.FileUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -46,7 +48,7 @@ public class TelMappingBackup {
     private TelOpusProberMappingDaParse telOpusProberMappingDaParse;
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     private SimpleDateFormat simpleDateFormatOthers = new SimpleDateFormat("yyMMddHHmm");
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(TelMappingBackup.class);
     @Around("execution(* com.vtest.it.telplatform.deal.TelPlatformDataDeal.deal(..))")
     public void MappingDeal(ProceedingJoinPoint proceedingJoinPoint) {
         ArrayList<DealWaferIdInformationBean> dealWaferIdInformationBeanArrayList = getDealList();
@@ -450,10 +452,11 @@ public class TelMappingBackup {
         long now = System.currentTimeMillis();
         for (File lot : lots) {
             long lotLastModifyTime = lot.lastModified();
-            if (((now - lotLastModifyTime) / 1000) < 100) {
+            if (((now - lotLastModifyTime) / 1000) < 300) {
                 continue;
             }
             if (lot.isDirectory() && lot.listFiles().length > 0) {
+                LOGGER.error(lot.getName() + " deal time: " + simpleDateFormat.format(System.currentTimeMillis()) + " lot last modify time: " + simpleDateFormat.format(lot.lastModified()));
                 if (fileTimeCheck.fileTimeCheck(lot)) {
                     File[] files = lot.listFiles();
                     for (File file : files) {

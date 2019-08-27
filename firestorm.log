@@ -1,149 +1,26 @@
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} clearParameters. 
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} closed
-DEBUG scheduling-1 druid.sql.Connection - {conn 110001} rollback
-DEBUG scheduling-1 druid.sql.Connection - {conn-110001} setAutoCommit true
-DEBUG scheduling-1 druid.sql.Connection - {conn-110001} pool-recycle
-DEBUG main druid.sql.Connection - {conn-10001} connected
-DEBUG main druid.sql.Statement - {conn-10001, stmt-20000} created
-DEBUG main druid.sql.Statement - {conn-10001, stmt-20000} closed
-DEBUG main druid.sql.Connection - {conn-110001,procId-1976488} connected
-DEBUG main druid.sql.Connection - {conn-210001,procId-1976489} connected
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} pool-connect
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} setAutoCommit false
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20001} created. {call WebMES.dbo.pro_getWaferid(?,?)}
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20001} Parameters : [FA96-7443, 02]
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20001} Types : [VARCHAR, VARCHAR]
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20001} executed. 115.510601 millis. {call WebMES.dbo.pro_getWaferid(?,?)}
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20001, rs-50000} open
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20001, rs-50000} Header: [WaferID]
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20001, rs-50000} Result: [FA967443-24]
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20001, rs-50000} closed
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, pstmt-20001} clearParameters. 
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} commited
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} setAutoCommit true
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} pool-recycle
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-10001} pool-connect
-DEBUG Druid-ConnectionPool-Create-1492400048 druid.sql.Connection - {conn-10002} connected
-DEBUG Druid-ConnectionPool-Create-1492400048 druid.sql.Statement - {conn-10002, stmt-20002} created
-DEBUG Druid-ConnectionPool-Create-1492400048 druid.sql.Statement - {conn-10002, stmt-20002} closed
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-10001} pool-recycle
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} pool-connect
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} setAutoCommit false
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-10002} pool-connect
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Statement - {conn-10002, stmt-20003} created
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20004} created. {call WebMES.dbo.pro_GetCurrstep(?)}
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20004} Parameters : [FA967443-24]
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20004} Types : [VARCHAR]
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Statement - {conn-10002, stmt-20003, rs-50001} query executed. 26.775354 millis. SELECT 1
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-10002, stmt-20003, rs-50001} open
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-10002, stmt-20003, rs-50001} Header: []
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-10002, stmt-20003, rs-50001} Result: [1]
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-10002, stmt-20003, rs-50001} closed
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Statement - {conn-10002, stmt-20003} closed
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-10002} pool-recycle
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-210001} pool-connect
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-210001} pool-recycle
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-210001} pool-connect
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Statement - {conn-210001, stmt-220000} created
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20004} executed. 267.538943 millis. {call WebMES.dbo.pro_GetCurrstep(?)}
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20004, rs-50002} open
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20004, rs-50002} Header: [cpstep]
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20004, rs-50002} Result: [CP1]
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20004, rs-50002} closed
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, pstmt-20004} clearParameters. 
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} commited
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} setAutoCommit true
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} pool-recycle
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Statement - {conn-210001, stmt-220000, rs-250000} query executed. 303.823319 millis. /* ping */ SELECT 1
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-210001, stmt-220000, rs-250000} open
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-210001, stmt-220000, rs-250000} Header: [1]
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-210001, stmt-220000, rs-250000} Result: [1]
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-210001, stmt-220000, rs-250000} closed
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Statement - {conn-210001, stmt-220000} closed
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-210001} pool-recycle
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-110001} pool-connect
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-110001} pool-recycle
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-110001} pool-connect
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Statement - {conn-110001, stmt-120000} created
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Statement - {conn-110001, stmt-120000, rs-150000} query executed. 1.70351 millis. /* ping */ SELECT 1
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-110001, stmt-120000, rs-150000} open
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-110001, stmt-120000, rs-150000} Header: [1]
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-110001, stmt-120000, rs-150000} Result: [1]
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.ResultSet - {conn-110001, stmt-120000, rs-150000} closed
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Statement - {conn-110001, stmt-120000} closed
-DEBUG RMI TCP Connection(11)-127.0.0.1 druid.sql.Connection - {conn-110001} pool-recycle
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} pool-connect
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} setAutoCommit false
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20005} created. {call WebMES.dbo.pro_GetWaferInfo(?,?)}
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20005} Parameters : [FA967443-24, CP1]
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20005} Types : [VARCHAR, VARCHAR]
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20005} executed. 1275.04454 millis. {call WebMES.dbo.pro_GetWaferInfo(?,?)}
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20005, rs-50003} open
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20005, rs-50003} Header: [lot_id, inner_lot, inner_monther_lot, customer_code, device_name, wafer_id, lot_starttime, pe_owner, tester_SoftWare_revision, tester_model, chinese_name, chinese_shortname, part_num, process_spec, process_revision, worker_order, lot_status, wip_stage, wip_step, po_number, customer_to_customer_po_number, part_desc, map_or_ink, is_otp, is_cop, fab_device, asy_device, ship_lot, assigned_testers, is_trimed, load_file, customer_tester_spec, map_reference, process_short_flow, wafer_pcs, sites, site_to_site, continue_fail, prober_device, operator, tester_program, all_cp_programs, tester_id, prober_id, prober_card_id, cp_process, hold_count, test_start_time, test_end_time, test_gross_die, stand_gross_die, gross_die, pass_die, fail_die, wafer_yield, stop_yield, major_fail, process_yield, cp_yield, pass_bins, os_bins, special_bins, theory_test_time, retest_rate, data_base, test_time, wafer_id_read, wafer_sequence, wf_size, index_x, index_y, map_cols, map_rows, gpib_bin, notch, customer_notch, slot, right_id, minx, miny, maxx, maxy, test_die_minx, test_die_miny, test_die_maxx, test_die_maxy]
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20005, rs-50003} Result: [FA96-7443, BFSMD31002.01, BFSMD31002, BFS, BP2306H1AD-CP, FA967443-24, 2019-07-30 11:29:12.0, Iris Zhang, NA, M7000, 上海晶丰明源半导体有限公司, NA, BFS_CBP2306H1AD00, PS_BFS_CBP2306H1AD, 5, BFS20190730.111404_19, 1, B, CP1T0, MP01-1907300001, NA, NA, NA, 1, 0, NA, NA, FA96-7443, NA, 1, NA, BP2306H1AC_CP_V0.1, NA, TB1-CP1-WV1-WP1-WPF, 13, 4, CP1:5, 10, BFS1BP2306TNE4VU, NA, BP2306_CP_4S_V1P1, CP1T0:BP2306_CP_4S_V1P1;, TTM-19A, PTL-11, BP2306HAA-PC-03, NA, 0, NA, NA, 18828, 18236, NA, NA, NA, NA, 92, NA, NA|97.50, NA, 1, 5, 7, 2.97, NA, NA, NA, Slot, 25-1, 8, 1030, 1510, NA, NA, 0, 270-Degree, NA, 2, 24, NA, NA, NA, NA, NA, NA, NA, NA]
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20005, rs-50003} closed
-DEBUG scheduling-1 druid.sql.Statement - {conn-10001, pstmt-20005} clearParameters. 
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} commited
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} setAutoCommit true
-DEBUG scheduling-1 druid.sql.Connection - {conn-10001} pool-recycle
-DEBUG scheduling-1 druid.sql.Connection - {conn-210001} pool-connect
-DEBUG scheduling-1 druid.sql.Connection - {conn-210001} setAutoCommit false
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220001} created. DELETE FROM vtdaprober.bin_info_summary WHERE custom_code=? AND device=? AND lot_id=? AND cp_step=? AND wafer_no =?;
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220001} Parameters : [BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24]
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220001} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220001} executed. 3771.068404 millis. DELETE FROM vtdaprober.bin_info_summary WHERE custom_code=? AND device=? AND lot_id=? AND cp_step=? AND wafer_no =?;
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220001} clearParameters. 
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} created. INSERT INTO vtdaprober.bin_info_summary(custom_code, device, lot_id, cp_step, wafer_no, site_id, soft_bin_no,
-        bin_count, pass_fail, test_type)
-        VALUES
-         (?,?,?,?,?,?,?,?,TRUE,?),
-                        
-                
-                    
-                            (?,?,?,?,?,?,?,?,FALSE,?),
-                        
-                
-                    
-                            (?,?,?,?,?,?,?,?,FALSE,?),
-                        
-                
-                    
-                            (?,?,?,?,?,?,?,?,FALSE,?),
-                        
-                
-                    
-                            (?,?,?,?,?,?,?,?,FALSE,?)  
-        ;
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} Parameters : [BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, 0, 1, 18466, P, BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, 0, 5, 298, P, BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, 0, 6, 38, P, BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, 0, 7, 21, P, BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, 0, 8, 5, P]
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR]
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} executed. 2.972716 millis. INSERT INTO vtdaprober.bin_info_summary(custom_code, device, lot_id, cp_step, wafer_no, site_id, soft_bin_no,
-        bin_count, pass_fail, test_type)
-        VALUES
-         (?,?,?,?,?,?,?,?,TRUE,?),
-                        
-                
-                    
-                            (?,?,?,?,?,?,?,?,FALSE,?),
-                        
-                
-                    
-                            (?,?,?,?,?,?,?,?,FALSE,?),
-                        
-                
-                    
-                            (?,?,?,?,?,?,?,?,FALSE,?),
-                        
-                
-                    
-                            (?,?,?,?,?,?,?,?,FALSE,?)  
-        ;
 DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} clearParameters. 
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} Parameters : [BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, 0, 1, 18466, F, BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, 0, 5, 298, F, BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, 0, 6, 38, F, BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, 0, 7, 21, F, BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, 0, 8, 5, F]
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR]
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} executed. 4.895938 millis. INSERT INTO vtdaprober.bin_info_summary(custom_code, device, lot_id, cp_step, wafer_no, site_id, soft_bin_no,
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} Parameters : [PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, 0, 1, 74776, F, PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, 0, 2, 61, F, PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, 0, 3, 2640, F, PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, 0, 5, 208, F, PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, 0, 6, 171, F, PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, 0, 7, 28, F, PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, 0, 23, 4, F, PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, 0, 8, 1, F, PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, 0, 13, 2, F]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} executed. 3.473573 millis. INSERT INTO vtdaprober.bin_info_summary(custom_code, device, lot_id, cp_step, wafer_no, site_id, soft_bin_no,
         bin_count, pass_fail, test_type)
         VALUES
          (?,?,?,?,?,?,?,?,TRUE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
                         
                 
                     
@@ -165,9 +42,9 @@ DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} clearParame
 DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} created. INSERT INTO vtdaprober.bin_wafer_summary(custom_code, device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, map_cols, map_rows, min_x, min_y, others_params)
         VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
         ON DUPLICATE KEY UPDATE oprator=?, tester_program=?, tester_id=?, prober_id=?, Prober_card_id=?, pid_name=?, pid_version=?, start_time=?, gross_die=?, pass_die=?, fail_die=?, yield=?, end_time=?, check_status=?, map_cols=?, map_rows=?, min_x=?, min_y=?, others_params=?,load_time=now();
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} Parameters : [BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, V888, BP2306_CP_4S_V1P1, TTM-19A, PTL-11, BP2306HAA-PC-03, PS_BFS_CBP2306H1AD, 5, 2019-07-31 00:35:01.0, 18828, 18466, 362, 98.08, 2019-07-31 02:35:15.0, 0, 192, 131, -2, -1, {"Customer Test Spec":"BP2306H1AC_CP_V0.1","WaferID_read":"Slot","Index X(mm)":"1030","Fab Device":"NA","WF_Size":"8","Map Reference":"NA","TestDieMinX":"0","Theory Test Time":"2.97","Retest Rate":"0","TestDieMinY":"0","Inner MotherLot":"BFSMD31002","Stop Yield":"92","Index Y(mm)":"1510","shipLot":"FA96-7443","Wafer_Sequence":"25-1","Lot Status":"1","Lot Start Time":"2019-07-30 11:29:12.0","Site To Site":"CP1:5","MES Stand Gross Die":"18236","Inner Lot":"BFSMD31002.01","Asy Device":"NA","Notch":"270-Degree","Sites":"4","Hold Count":"0","GPIB_Bin":"0","PE Owner":"Iris Zhang","MaxX":"189","MaxY":"129","Process Short Flow":"TB1-CP1-WV1-WP1-WPF","Is Trimed":"True","Process Yield":"NA|97.50","OS Bins":"5","Slot":"2","Pass Bins":"1","Tester SoftWare Revision":"NA","Chines Short Name":"NA","Is OTP":"True","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"BFS1BP2306TNE4VU","PO Number":"MP01-1907300001","Load File":"NA","Special Bins":"7","DataBase":"TEL","Continue Fail":"10","TestDieMaxX":"188","TestDieMaxY":"127","MES Test Gross Die":"18828","CP Yields":"CP1&98.08%;","RightID":"24","TestTime":"120","Tester Model":"M7000","Major Fail":"NA","Chinese Name":"上海晶丰明源半导体有限公司","Part DESC":"NA","ALL CP Programs":"CP1T0:BP2306_CP_4S_V1P1;","Worker Order":"BFS20190730.111404_19","Wip Step":"CP1T0","customerNotch":"NA","Wafer PCS":"13","Is COP":"False","CTC PO Number":"NA"}, V888, BP2306_CP_4S_V1P1, TTM-19A, PTL-11, BP2306HAA-PC-03, PS_BFS_CBP2306H1AD, 5, 2019-07-31 00:35:01.0, 18828, 18466, 362, 98.08, 2019-07-31 02:35:15.0, 0, 192, 131, -2, -1, {"Customer Test Spec":"BP2306H1AC_CP_V0.1","WaferID_read":"Slot","Index X(mm)":"1030","Fab Device":"NA","WF_Size":"8","Map Reference":"NA","TestDieMinX":"0","Theory Test Time":"2.97","Retest Rate":"0","TestDieMinY":"0","Inner MotherLot":"BFSMD31002","Stop Yield":"92","Index Y(mm)":"1510","shipLot":"FA96-7443","Wafer_Sequence":"25-1","Lot Status":"1","Lot Start Time":"2019-07-30 11:29:12.0","Site To Site":"CP1:5","MES Stand Gross Die":"18236","Inner Lot":"BFSMD31002.01","Asy Device":"NA","Notch":"270-Degree","Sites":"4","Hold Count":"0","GPIB_Bin":"0","PE Owner":"Iris Zhang","MaxX":"189","MaxY":"129","Process Short Flow":"TB1-CP1-WV1-WP1-WPF","Is Trimed":"True","Process Yield":"NA|97.50","OS Bins":"5","Slot":"2","Pass Bins":"1","Tester SoftWare Revision":"NA","Chines Short Name":"NA","Is OTP":"True","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"BFS1BP2306TNE4VU","PO Number":"MP01-1907300001","Load File":"NA","Special Bins":"7","DataBase":"TEL","Continue Fail":"10","TestDieMaxX":"188","TestDieMaxY":"127","MES Test Gross Die":"18828","CP Yields":"CP1&98.08%;","RightID":"24","TestTime":"120","Tester Model":"M7000","Major Fail":"NA","Chinese Name":"上海晶丰明源半导体有限公司","Part DESC":"NA","ALL CP Programs":"CP1T0:BP2306_CP_4S_V1P1;","Worker Order":"BFS20190730.111404_19","Wip Step":"CP1T0","customerNotch":"NA","Wafer PCS":"13","Is COP":"False","CTC PO Number":"NA"}]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} Parameters : [PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, V100, V_PY1603V2D_P25Q40HD_25C_V04_02_CP2, TTH-30, PTL-01, PY1603V2A-PC-C1C2-07, PS_PRA_CP25Q40HDWF12, 4, 2019-08-27 13:08:41.0, 77891, 74776, 3115, 96.0, 2019-08-27 13:58:13.0, 0, 432, 239, 5, 5, {"Customer Test Spec":"na","WaferID_read":"OCR","Index X(mm)":"692","Fab Device":"PY1603V2D","WF_Size":"12","Map Reference":"(332,30);(220,239)","TestDieMinX":"9","Theory Test Time":"1.59","Retest Rate":"0","TestDieMinY":"7","Inner MotherLot":"PRAMD33C0R","Stop Yield":"88","Index Y(mm)":"1247","shipLot":"AP25531","Wafer_Sequence":"1-25","Lot Status":"1","Lot Start Time":"2019-08-23 00:25:26.0","Site To Site":"CP1:5;CP2:5","MES Stand Gross Die":"77891","Inner Lot":"PRAMD33C0R.01","Asy Device":"NA","Notch":"180-Degree","Sites":"64","Hold Count":"0","GPIB_Bin":"0","PE Owner":"Wales","MaxX":"437","MaxY":"243","Process Short Flow":"TB1-CP1-BK1-CP2-WV1-WP1-WPF","Is Trimed":"False","Process Yield":"NA|93.00","OS Bins":"2","Slot":"4","Pass Bins":"1","Tester SoftWare Revision":"CRAFT_3380_2.40-SP7","Chines Short Name":"NA","Is OTP":"False","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"PRA2N4M25XTNTCVA","PO Number":"NA","Load File":"na","Special Bins":"na","DataBase":"TEL","Continue Fail":"10ea","TestDieMaxX":"432","TestDieMaxY":"241","MES Test Gross Die":"77891","CP Yields":"CP1&96.64%;CP2&96.00%;","RightID":"4","TestTime":"91","Tester Model":"Chroma","Major Fail":"na","Chinese Name":"普冉半导体(上海)有限公司","Part DESC":"双定位,v4.01","ALL CP Programs":"CP1T0:V_PY1603V2D_P25Q40HD_25C_V04_02_CP1;CP2T0:V_PY1603V2D_P25Q40HD_25C_V04_02_CP2;","Worker Order":"PRA20190818.1","Wip Step":"CP2T0","customerNotch":"NA","Wafer PCS":"6","Is COP":"False","CTC PO Number":"NA"}, V100, V_PY1603V2D_P25Q40HD_25C_V04_02_CP2, TTH-30, PTL-01, PY1603V2A-PC-C1C2-07, PS_PRA_CP25Q40HDWF12, 4, 2019-08-27 13:08:41.0, 77891, 74776, 3115, 96.0, 2019-08-27 13:58:13.0, 0, 432, 239, 5, 5, {"Customer Test Spec":"na","WaferID_read":"OCR","Index X(mm)":"692","Fab Device":"PY1603V2D","WF_Size":"12","Map Reference":"(332,30);(220,239)","TestDieMinX":"9","Theory Test Time":"1.59","Retest Rate":"0","TestDieMinY":"7","Inner MotherLot":"PRAMD33C0R","Stop Yield":"88","Index Y(mm)":"1247","shipLot":"AP25531","Wafer_Sequence":"1-25","Lot Status":"1","Lot Start Time":"2019-08-23 00:25:26.0","Site To Site":"CP1:5;CP2:5","MES Stand Gross Die":"77891","Inner Lot":"PRAMD33C0R.01","Asy Device":"NA","Notch":"180-Degree","Sites":"64","Hold Count":"0","GPIB_Bin":"0","PE Owner":"Wales","MaxX":"437","MaxY":"243","Process Short Flow":"TB1-CP1-BK1-CP2-WV1-WP1-WPF","Is Trimed":"False","Process Yield":"NA|93.00","OS Bins":"2","Slot":"4","Pass Bins":"1","Tester SoftWare Revision":"CRAFT_3380_2.40-SP7","Chines Short Name":"NA","Is OTP":"False","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"PRA2N4M25XTNTCVA","PO Number":"NA","Load File":"na","Special Bins":"na","DataBase":"TEL","Continue Fail":"10ea","TestDieMaxX":"432","TestDieMaxY":"241","MES Test Gross Die":"77891","CP Yields":"CP1&96.64%;CP2&96.00%;","RightID":"4","TestTime":"91","Tester Model":"Chroma","Major Fail":"na","Chinese Name":"普冉半导体(上海)有限公司","Part DESC":"双定位,v4.01","ALL CP Programs":"CP1T0:V_PY1603V2D_P25Q40HD_25C_V04_02_CP1;CP2T0:V_PY1603V2D_P25Q40HD_25C_V04_02_CP2;","Worker Order":"PRA20190818.1","Wip Step":"CP2T0","customerNotch":"NA","Wafer PCS":"6","Is COP":"False","CTC PO Number":"NA"}]
 DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, INTEGER, INTEGER, DOUBLE, TIMESTAMP, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, INTEGER, INTEGER, DOUBLE, TIMESTAMP, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, VARCHAR]
-DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} executed. 3.378437 millis. INSERT INTO vtdaprober.bin_wafer_summary(custom_code, device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, map_cols, map_rows, min_x, min_y, others_params)
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} executed. 3.955658 millis. INSERT INTO vtdaprober.bin_wafer_summary(custom_code, device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, map_cols, map_rows, min_x, min_y, others_params)
         VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
         ON DUPLICATE KEY UPDATE oprator=?, tester_program=?, tester_id=?, prober_id=?, Prober_card_id=?, pid_name=?, pid_version=?, start_time=?, gross_die=?, pass_die=?, fail_die=?, yield=?, end_time=?, check_status=?, map_cols=?, map_rows=?, min_x=?, min_y=?, others_params=?,load_time=now();
 DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} clearParameters. 
@@ -177,33 +54,14 @@ DEBUG scheduling-1 druid.sql.Connection - {conn-210001} pool-recycle
 DEBUG scheduling-1 druid.sql.Connection - {conn-110001} pool-connect
 DEBUG scheduling-1 druid.sql.Connection - {conn-110001} setAutoCommit false
 DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} created. SELECT custom_code as customer_code,device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, check_result,map_cols, map_rows, min_x, min_y, others_params FROM VTPTMT.bin_wafer_summary WHERE tester_id=?;
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} Parameters : [TTM-19A]
+DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} Parameters : [TTH-30]
 DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} Types : [VARCHAR]
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} executed. 5.309337 millis. SELECT custom_code as customer_code,device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, check_result,map_cols, map_rows, min_x, min_y, others_params FROM VTPTMT.bin_wafer_summary WHERE tester_id=?;
+DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} executed. 2.753859 millis. SELECT custom_code as customer_code,device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, check_result,map_cols, map_rows, min_x, min_y, others_params FROM VTPTMT.bin_wafer_summary WHERE tester_id=?;
 DEBUG scheduling-1 druid.sql.ResultSet - {conn-110001, pstmt-120001, rs-150001} open
 DEBUG scheduling-1 druid.sql.ResultSet - {conn-110001, pstmt-120001, rs-150001} Header: [custom_code, device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, check_result, map_cols, map_rows, min_x, min_y, others_params]
-DEBUG scheduling-1 druid.sql.ResultSet - {conn-110001, pstmt-120001, rs-150001} Result: [AVW, AW248CY, CL6L21.1, CP1, CL6L21-25, , AW248_CP_2S_V1P1, TTM-19A, PTL-11, AW248-PC-03, PS_AVW_CAW24800, 3, 2019-07-29 12:32:21.0, 2967, 2822, 145, 95.11, 2019-07-30 10:34:45.0, 0, Low Yield Fail;, 156, 152, 0, -3, {"Customer Test Spec":"AW-P248-AW248-20150331","WaferID_read":"Slot","Index X(mm)":"1270","Fab Device":"NA","WF_Size":"8","Map Reference":"NA","TestDieMinX":"2","Theory Test Time":"0.85","Retest Rate":"0","TestDieMinY":"1","Inner MotherLot":"AVWMD30019","Stop Yield":"92","Index Y(mm)":"1305","shipLot":"CL6L21.1","Wafer_Sequence":"1-25","Lot Status":"1","Lot Start Time":"2019-07-26 18:36:55.147","Site To Site":"CP1:3","MES Stand Gross Die":"2967","Inner Lot":"AVWMD30019","Asy Device":"NA","Notch":"180-Degree","Sites":"2","Hold Count":"0","GPIB_Bin":"0","PE Owner":"clare.zhang","MaxX":"155","MaxY":"148","Process Short Flow":"TB1-CP1-WV1-WP1-WPF","Is Trimed":"False","Process Yield":"97.50|97.50","OS Bins":"5","Slot":"25","Pass Bins":"1","Tester SoftWare Revision":"NA","Chines Short Name":"NA","Is OTP":"False","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"ATW1AW248CTNE2VU","PO Number":"SFP220190726001","Load File":"na","Special Bins":"NA","DataBase":"TEL","Continue Fail":"10","TestDieMaxX":"153","TestDieMaxY":"146","MES Test Gross Die":"2967","CP Yields":"NA","RightID":"25","TestTime":"2","Tester Model":"M7000","Major Fail":"5","Chinese Name":"上海艾为电子技术股份有限公司","Part DESC":"17380  抽测","ALL CP Programs":"CP1T0:AW248_CP_2S_V1P1;","Worker Order":"AVW20190726.141522_1","Wip Step":"CP1T0","customerNotch":"NA","Wafer PCS":"25","Is COP":"True","CTC PO Number":"NA"}]
+DEBUG scheduling-1 druid.sql.ResultSet - {conn-110001, pstmt-120001, rs-150001} Result: [PRA, P25Q40HDWF, AP25531, CP2, AP25531-04-F7, V888, V_PY1603V2D_P25Q40HD_25C_V04_02_CP2, TTH-30, PTL-01, PY1603V2A-PC-C1C2-07, PS_PRA_CP25Q40HDWF12, 4, 2019-08-27 13:09:11.0, 77891, 74776, 3115, 96.0, 2019-08-27 13:58:01.0, 0, 10 interflow Fail;, 432, 239, 5, 5, {"Customer Test Spec":"na","WaferID_read":"OCR","Index X(mm)":"692","Fab Device":"PY1603V2D","WF_Size":"12","Map Reference":"(332,30);(220,239)","TestDieMinX":"9","Theory Test Time":"1.59","Retest Rate":"0","TestDieMinY":"7","Inner MotherLot":"PRAMD33C0R","Stop Yield":"88","Index Y(mm)":"1247","shipLot":"AP25531","Wafer_Sequence":"1-25","Lot Status":"1","Lot Start Time":"2019-08-23 00:25:26.0","Site To Site":"CP1:5;CP2:5","MES Stand Gross Die":"77891","Inner Lot":"PRAMD33C0R.01","Asy Device":"NA","Notch":"180-Degree","Sites":"64","Hold Count":"0","GPIB_Bin":"0","PE Owner":"Wales","MaxX":"437","MaxY":"243","Process Short Flow":"TB1-CP1-BK1-CP2-WV1-WP1-WPF","Is Trimed":"False","Process Yield":"NA|93.00","OS Bins":"2","Slot":"4","Pass Bins":"1","Tester SoftWare Revision":"CRAFT_3380_2.40-SP7","Chines Short Name":"NA","Is OTP":"False","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"PRA2N4M25XTNTCVA","PO Number":"NA","Load File":"na","Special Bins":"na","DataBase":"TEL","Continue Fail":"10ea","TestDieMaxX":"432","TestDieMaxY":"241","MES Test Gross Die":"77891","CP Yields":"CP1&96.64%;CP2&96.00%;","RightID":"4","TestTime":"91","Tester Model":"Chroma","Major Fail":"na","Chinese Name":"普冉半导体(上海)有限公司","Part DESC":"双定位,v4.01","ALL CP Programs":"CP1T0:V_PY1603V2D_P25Q40HD_25C_V04_02_CP1;CP2T0:V_PY1603V2D_P25Q40HD_25C_V04_02_CP2;","Worker Order":"PRA20190818.1","Wip Step":"CP2T0","customerNotch":"NA","Wafer PCS":"6","Is COP":"False","CTC PO Number":"NA"}]
 DEBUG scheduling-1 druid.sql.ResultSet - {conn-110001, pstmt-120001, rs-150001} closed
 DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} clearParameters. 
-DEBUG scheduling-1 druid.sql.Connection - {conn-110001} commited
-DEBUG scheduling-1 druid.sql.Connection - {conn-110001} setAutoCommit true
-DEBUG scheduling-1 druid.sql.Connection - {conn-110001} pool-recycle
-DEBUG scheduling-1 druid.sql.Connection - {conn-110001} pool-connect
-DEBUG scheduling-1 druid.sql.Connection - {conn-110001} setAutoCommit false
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120002} created. INSERT INTO VTPTMT.bin_wafer_summary(custom_code, device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, check_result,map_cols, map_rows, min_x, min_y, others_params)
-        VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
-        ON DUPLICATE KEY UPDATE custom_code=?,device=? ,lot_id=?,cp_step=?,wafer_no=?,oprator=?, tester_program=?, prober_id=?, Prober_card_id=?, pid_name=?, pid_version=?, start_time=?, gross_die=?, pass_die=?, fail_die=?, yield=?, end_time=?, check_status=?,check_result=?, map_cols=?, map_rows=?, min_x=?, min_y=?, others_params=?,load_time=now();
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120002} Parameters : [BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, V888, BP2306_CP_4S_V1P1, TTM-19A, PTL-11, BP2306HAA-PC-03, PS_BFS_CBP2306H1AD, 5, 2019-07-31 00:35:01.0, 18828, 18466, 362, 98.08, 2019-07-31 02:35:15.0, 0, 10 interflow Fail;, 192, 131, -2, -1, {"Customer Test Spec":"BP2306H1AC_CP_V0.1","WaferID_read":"Slot","Index X(mm)":"1030","Fab Device":"NA","WF_Size":"8","Map Reference":"NA","TestDieMinX":"0","Theory Test Time":"2.97","Retest Rate":"0","TestDieMinY":"0","Inner MotherLot":"BFSMD31002","Stop Yield":"92","Index Y(mm)":"1510","shipLot":"FA96-7443","Wafer_Sequence":"25-1","Lot Status":"1","Lot Start Time":"2019-07-30 11:29:12.0","Site To Site":"CP1:5","MES Stand Gross Die":"18236","Inner Lot":"BFSMD31002.01","Asy Device":"NA","Notch":"270-Degree","Sites":"4","Hold Count":"0","GPIB_Bin":"0","PE Owner":"Iris Zhang","MaxX":"189","MaxY":"129","Process Short Flow":"TB1-CP1-WV1-WP1-WPF","Is Trimed":"True","Process Yield":"NA|97.50","OS Bins":"5","Slot":"2","Pass Bins":"1","Tester SoftWare Revision":"NA","Chines Short Name":"NA","Is OTP":"True","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"BFS1BP2306TNE4VU","PO Number":"MP01-1907300001","Load File":"NA","Special Bins":"7","DataBase":"TEL","Continue Fail":"10","TestDieMaxX":"188","TestDieMaxY":"127","MES Test Gross Die":"18828","CP Yields":"CP1&98.08%;","RightID":"24","TestTime":"120","Tester Model":"M7000","Major Fail":"NA","Chinese Name":"上海晶丰明源半导体有限公司","Part DESC":"NA","ALL CP Programs":"CP1T0:BP2306_CP_4S_V1P1;","Worker Order":"BFS20190730.111404_19","Wip Step":"CP1T0","customerNotch":"NA","Wafer PCS":"13","Is COP":"False","CTC PO Number":"NA"}, BFS, BP2306H1AD-CP, FA96-7443, CP1, FA967443-24, V888, BP2306_CP_4S_V1P1, PTL-11, BP2306HAA-PC-03, PS_BFS_CBP2306H1AD, 5, 2019-07-31 00:35:01.0, 18828, 18466, 362, 98.08, 2019-07-31 02:35:15.0, 0, 10 interflow Fail;, 192, 131, -2, -1, {"Customer Test Spec":"BP2306H1AC_CP_V0.1","WaferID_read":"Slot","Index X(mm)":"1030","Fab Device":"NA","WF_Size":"8","Map Reference":"NA","TestDieMinX":"0","Theory Test Time":"2.97","Retest Rate":"0","TestDieMinY":"0","Inner MotherLot":"BFSMD31002","Stop Yield":"92","Index Y(mm)":"1510","shipLot":"FA96-7443","Wafer_Sequence":"25-1","Lot Status":"1","Lot Start Time":"2019-07-30 11:29:12.0","Site To Site":"CP1:5","MES Stand Gross Die":"18236","Inner Lot":"BFSMD31002.01","Asy Device":"NA","Notch":"270-Degree","Sites":"4","Hold Count":"0","GPIB_Bin":"0","PE Owner":"Iris Zhang","MaxX":"189","MaxY":"129","Process Short Flow":"TB1-CP1-WV1-WP1-WPF","Is Trimed":"True","Process Yield":"NA|97.50","OS Bins":"5","Slot":"2","Pass Bins":"1","Tester SoftWare Revision":"NA","Chines Short Name":"NA","Is OTP":"True","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"BFS1BP2306TNE4VU","PO Number":"MP01-1907300001","Load File":"NA","Special Bins":"7","DataBase":"TEL","Continue Fail":"10","TestDieMaxX":"188","TestDieMaxY":"127","MES Test Gross Die":"18828","CP Yields":"CP1&98.08%;","RightID":"24","TestTime":"120","Tester Model":"M7000","Major Fail":"NA","Chinese Name":"上海晶丰明源半导体有限公司","Part DESC":"NA","ALL CP Programs":"CP1T0:BP2306_CP_4S_V1P1;","Worker Order":"BFS20190730.111404_19","Wip Step":"CP1T0","customerNotch":"NA","Wafer PCS":"13","Is COP":"False","CTC PO Number":"NA"}]
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, INTEGER, INTEGER, DOUBLE, TIMESTAMP, INTEGER, VARCHAR, INTEGER, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, INTEGER, INTEGER, DOUBLE, TIMESTAMP, INTEGER, VARCHAR, INTEGER, INTEGER, INTEGER, INTEGER, VARCHAR]
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120002} executed. 23.617056 millis. INSERT INTO VTPTMT.bin_wafer_summary(custom_code, device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, check_result,map_cols, map_rows, min_x, min_y, others_params)
-        VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
-        ON DUPLICATE KEY UPDATE custom_code=?,device=? ,lot_id=?,cp_step=?,wafer_no=?,oprator=?, tester_program=?, prober_id=?, Prober_card_id=?, pid_name=?, pid_version=?, start_time=?, gross_die=?, pass_die=?, fail_die=?, yield=?, end_time=?, check_status=?,check_result=?, map_cols=?, map_rows=?, min_x=?, min_y=?, others_params=?,load_time=now();
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120002} clearParameters. 
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, cstmt-120003} created. {call e_updatecheckwafinfo(?,?,?)}
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, cstmt-120003} Parameters : [FA967443-24, CP1, TTM-19A]
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, cstmt-120003} Types : [VARCHAR, VARCHAR, VARCHAR]
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, cstmt-120003} executed. 389.505219 millis. {call e_updatecheckwafinfo(?,?,?)}
-DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120003} clearParameters. 
 DEBUG scheduling-1 druid.sql.Connection - {conn-110001} commited
 DEBUG scheduling-1 druid.sql.Connection - {conn-110001} setAutoCommit true
 DEBUG scheduling-1 druid.sql.Connection - {conn-110001} pool-recycle
