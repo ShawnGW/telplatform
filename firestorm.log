@@ -272,3 +272,313 @@ DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} clearParame
 DEBUG scheduling-1 druid.sql.Connection - {conn-110001} commited
 DEBUG scheduling-1 druid.sql.Connection - {conn-110001} setAutoCommit true
 DEBUG scheduling-1 druid.sql.Connection - {conn-110001} pool-recycle
+DEBUG main druid.sql.Connection - {conn-10001} connected
+DEBUG main druid.sql.Statement - {conn-10001, stmt-20000} created
+DEBUG main druid.sql.Statement - {conn-10001, stmt-20000} closed
+DEBUG main druid.sql.Connection - {conn-110001,procId-994584} connected
+DEBUG main druid.sql.Connection - {conn-210001,procId-994585} connected
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-10001} pool-connect
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-10001} pool-recycle
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-10001} pool-connect
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Statement - {conn-10001, stmt-20001} created
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Statement - {conn-10001, stmt-20001, rs-50000} query executed. 150.074152 millis. SELECT 1
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-10001, stmt-20001, rs-50000} open
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-10001, stmt-20001, rs-50000} Header: []
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-10001, stmt-20001, rs-50000} Result: [1]
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-10001, stmt-20001, rs-50000} closed
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Statement - {conn-10001, stmt-20001} closed
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-10001} pool-recycle
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-210001} pool-connect
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-210001} pool-recycle
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-210001} pool-connect
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Statement - {conn-210001, stmt-220000} created
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Statement - {conn-210001, stmt-220000, rs-250000} query executed. 41.740691 millis. /* ping */ SELECT 1
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-210001, stmt-220000, rs-250000} open
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-210001, stmt-220000, rs-250000} Header: [1]
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-210001, stmt-220000, rs-250000} Result: [1]
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-210001, stmt-220000, rs-250000} closed
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Statement - {conn-210001, stmt-220000} closed
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-210001} pool-recycle
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-110001} pool-connect
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-110001} pool-recycle
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-110001} pool-connect
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Statement - {conn-110001, stmt-120000} created
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Statement - {conn-110001, stmt-120000, rs-150000} query executed. 7.468978 millis. /* ping */ SELECT 1
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-110001, stmt-120000, rs-150000} open
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-110001, stmt-120000, rs-150000} Header: [1]
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-110001, stmt-120000, rs-150000} Result: [1]
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.ResultSet - {conn-110001, stmt-120000, rs-150000} closed
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Statement - {conn-110001, stmt-120000} closed
+DEBUG RMI TCP Connection(2)-127.0.0.1 druid.sql.Connection - {conn-110001} pool-recycle
+DEBUG scheduling-1 druid.sql.Connection - {conn-10001} pool-connect
+DEBUG scheduling-1 druid.sql.Connection - {conn-10001} setAutoCommit false
+DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20002} created. {call WebMES.dbo.pro_GetCurrstep(?)}
+DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20002} Parameters : [AP2H541-05-A0]
+DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20002} Types : [VARCHAR]
+DEBUG scheduling-1 druid.sql.Statement - {conn-10001, cstmt-20002} executed. 131.273711 millis. {call WebMES.dbo.pro_GetCurrstep(?)}
+DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20002, rs-50001} open
+DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20002, rs-50001} Header: [cpstep]
+DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20002, rs-50001} Result: [CP2]
+DEBUG scheduling-1 druid.sql.ResultSet - {conn-10001, cstmt-20002, rs-50001} closed
+DEBUG scheduling-1 druid.sql.Statement - {conn-10001, pstmt-20002} clearParameters. 
+DEBUG scheduling-1 druid.sql.Connection - {conn-10001} commited
+DEBUG scheduling-1 druid.sql.Connection - {conn-10001} setAutoCommit true
+DEBUG scheduling-1 druid.sql.Connection - {conn-10001} pool-recycle
+DEBUG scheduling-1 druid.sql.Connection - {conn-210001} pool-connect
+DEBUG scheduling-1 druid.sql.Connection - {conn-210001} setAutoCommit false
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220001} created. DELETE FROM vtdaprober.bin_info_summary WHERE custom_code=? AND device=? AND lot_id=? AND cp_step=? AND wafer_no =? and id > 0;
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220001} Parameters : [PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220001} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220001} executed. 16.53065 millis. DELETE FROM vtdaprober.bin_info_summary WHERE custom_code=? AND device=? AND lot_id=? AND cp_step=? AND wafer_no =? and id > 0;
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220001} clearParameters. 
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} created. INSERT INTO vtdaprober.bin_info_summary(custom_code, device, lot_id, cp_step, wafer_no, site_id, soft_bin_no,
+        bin_count, pass_fail, test_type)
+        VALUES
+         (?,?,?,?,?,?,?,?,TRUE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?)  
+        ;
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} Parameters : [PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 1, 120565, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 2, 22, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 4, 189, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 5, 86, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 6, 81, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 7, 65, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 9, 138, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 12, 11, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 17, 102, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 18, 2, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 19, 31, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 20, 255, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 21, 21, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 22, 15, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 23, 3, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 25, 67, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 26, 451, P, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 31, 52, P]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} executed. 18.683112 millis. INSERT INTO vtdaprober.bin_info_summary(custom_code, device, lot_id, cp_step, wafer_no, site_id, soft_bin_no,
+        bin_count, pass_fail, test_type)
+        VALUES
+         (?,?,?,?,?,?,?,?,TRUE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?)  
+        ;
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} clearParameters. 
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} Parameters : [PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 1, 120565, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 2, 22, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 4, 189, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 5, 86, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 6, 81, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 7, 65, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 9, 138, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 12, 11, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 17, 102, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 18, 2, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 19, 31, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 20, 255, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 21, 21, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 22, 15, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 23, 3, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 25, 67, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 26, 451, F, PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, 0, 31, 52, F]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, INTEGER, VARCHAR]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} executed. 19.00438 millis. INSERT INTO vtdaprober.bin_info_summary(custom_code, device, lot_id, cp_step, wafer_no, site_id, soft_bin_no,
+        bin_count, pass_fail, test_type)
+        VALUES
+         (?,?,?,?,?,?,?,?,TRUE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?),
+                        
+                
+                    
+                            (?,?,?,?,?,?,?,?,FALSE,?)  
+        ;
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220002} clearParameters. 
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} created. INSERT INTO vtdaprober.bin_wafer_summary(custom_code, device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, map_cols, map_rows, min_x, min_y, others_params)
+        VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        ON DUPLICATE KEY UPDATE oprator=?, tester_program=?, tester_id=?, prober_id=?, Prober_card_id=?, pid_name=?, pid_version=?, start_time=?, gross_die=?, pass_die=?, fail_die=?, yield=?, end_time=?, check_status=?, map_cols=?, map_rows=?, min_x=?, min_y=?, others_params=?,load_time=now();
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} Parameters : [PRA, P25Q21HAWF, AP2H541, CP2, AP2H541-05-A0, V888, V_PY1705V1B_P25Q21HAWF_25C_V02_10_CP2, TTH-28, PTL-06, P25Q11HA-C1C2-PC-01, PS_PRA_CP25Q21HAWF00, 4, 2020-04-01 11:13:00.0, 122156, 120565, 1591, 98.7, 2020-04-01 16:41:15.0, 0, 403, 402, 3, 3, {"Customer Test Spec":"na","WaferID_read":"OCR","Index X(mm)":"742","Fab Device":"PY1705V1B","WF_Size":"12","Map Reference":"(306,49);(101,358)","TestDieMinX":"6","Theory Test Time":"6.27","Retest Rate":"0","TestDieMinY":"6","Inner MotherLot":"PRAME13C11","Stop Yield":"88","Index Y(mm)":"742","shipLot":"AP2H541","Wafer_Sequence":"1-25","Lot Status":"1","Lot Start Time":"2020-03-27 16:46:24.0","Site To Site":"CP1:5;CP2:5","MES Stand Gross Die":"122156","Inner Lot":"PRAME13C11.02","Asy Device":"NA","Notch":"180-Degree","Sites":"64","Hold Count":"0","GPIB_Bin":"0","PE Owner":"Wales","MaxX":"405","MaxY":"404","Process Short Flow":"TB1-CP1-BK1-CP2-CP9-WV1-WP1-WPF","Is Trimed":"False","Process Yield":"NA|93.0000","OS Bins":"2","Slot":"5","Pass Bins":"1","Tester SoftWare Revision":"CRAFT_3380_2.40-SP7","Chines Short Name":"NA","Is OTP":"True","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"PRA2N21HAXTNTCVA","PO Number":"M591-2003270008","Load File":"na","Special Bins":"na","DataBase":"TEL","Continue Fail":"10ea","TestDieMaxX":"401","TestDieMaxY":"401","MES Test Gross Die":"122156","CP Yields":"CP1&98.70%;CP2&98.70%;","RightID":"5","TestTime":"374","Tester Model":"Chroma","Major Fail":"na","Chinese Name":"普冉半导体(上海)股份有限公司","Part DESC":"V2.10双定位","ALL CP Programs":"CP1T0:V_PY1705V1B_P25Q21HAWF_25C_V02_10_CP1;CP2T0:V_PY1705V1B_P25Q21HAWF_25C_V02_10_CP2;","Worker Order":"PRA20200327.164220_1","Wip Step":"CP2T0","customerNotch":"NA","Wafer PCS":"5","Is COP":"False","CTC PO Number":"NA"}, V888, V_PY1705V1B_P25Q21HAWF_25C_V02_10_CP2, TTH-28, PTL-06, P25Q11HA-C1C2-PC-01, PS_PRA_CP25Q21HAWF00, 4, 2020-04-01 11:13:00.0, 122156, 120565, 1591, 98.7, 2020-04-01 16:41:15.0, 0, 403, 402, 3, 3, {"Customer Test Spec":"na","WaferID_read":"OCR","Index X(mm)":"742","Fab Device":"PY1705V1B","WF_Size":"12","Map Reference":"(306,49);(101,358)","TestDieMinX":"6","Theory Test Time":"6.27","Retest Rate":"0","TestDieMinY":"6","Inner MotherLot":"PRAME13C11","Stop Yield":"88","Index Y(mm)":"742","shipLot":"AP2H541","Wafer_Sequence":"1-25","Lot Status":"1","Lot Start Time":"2020-03-27 16:46:24.0","Site To Site":"CP1:5;CP2:5","MES Stand Gross Die":"122156","Inner Lot":"PRAME13C11.02","Asy Device":"NA","Notch":"180-Degree","Sites":"64","Hold Count":"0","GPIB_Bin":"0","PE Owner":"Wales","MaxX":"405","MaxY":"404","Process Short Flow":"TB1-CP1-BK1-CP2-CP9-WV1-WP1-WPF","Is Trimed":"False","Process Yield":"NA|93.0000","OS Bins":"2","Slot":"5","Pass Bins":"1","Tester SoftWare Revision":"CRAFT_3380_2.40-SP7","Chines Short Name":"NA","Is OTP":"True","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"PRA2N21HAXTNTCVA","PO Number":"M591-2003270008","Load File":"na","Special Bins":"na","DataBase":"TEL","Continue Fail":"10ea","TestDieMaxX":"401","TestDieMaxY":"401","MES Test Gross Die":"122156","CP Yields":"CP1&98.70%;CP2&98.70%;","RightID":"5","TestTime":"374","Tester Model":"Chroma","Major Fail":"na","Chinese Name":"普冉半导体(上海)股份有限公司","Part DESC":"V2.10双定位","ALL CP Programs":"CP1T0:V_PY1705V1B_P25Q21HAWF_25C_V02_10_CP1;CP2T0:V_PY1705V1B_P25Q21HAWF_25C_V02_10_CP2;","Worker Order":"PRA20200327.164220_1","Wip Step":"CP2T0","customerNotch":"NA","Wafer PCS":"5","Is COP":"False","CTC PO Number":"NA"}]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, INTEGER, INTEGER, DOUBLE, TIMESTAMP, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, TIMESTAMP, INTEGER, INTEGER, INTEGER, DOUBLE, TIMESTAMP, INTEGER, INTEGER, INTEGER, INTEGER, INTEGER, VARCHAR]
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} executed. 17.967616 millis. INSERT INTO vtdaprober.bin_wafer_summary(custom_code, device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, map_cols, map_rows, min_x, min_y, others_params)
+        VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        ON DUPLICATE KEY UPDATE oprator=?, tester_program=?, tester_id=?, prober_id=?, Prober_card_id=?, pid_name=?, pid_version=?, start_time=?, gross_die=?, pass_die=?, fail_die=?, yield=?, end_time=?, check_status=?, map_cols=?, map_rows=?, min_x=?, min_y=?, others_params=?,load_time=now();
+DEBUG scheduling-1 druid.sql.Statement - {conn-210001, pstmt-220003} clearParameters. 
+DEBUG scheduling-1 druid.sql.Connection - {conn-210001} commited
+DEBUG scheduling-1 druid.sql.Connection - {conn-210001} setAutoCommit true
+DEBUG scheduling-1 druid.sql.Connection - {conn-210001} pool-recycle
+DEBUG scheduling-1 druid.sql.Connection - {conn-110001} pool-connect
+DEBUG scheduling-1 druid.sql.Connection - {conn-110001} setAutoCommit false
+DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} created. SELECT custom_code as customer_code,device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, check_result,map_cols, map_rows, min_x, min_y, others_params FROM VTPTMT.bin_wafer_summary WHERE tester_id=?;
+DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} Parameters : [TTH-28]
+DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} Types : [VARCHAR]
+DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} executed. 14.129877 millis. SELECT custom_code as customer_code,device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, check_result,map_cols, map_rows, min_x, min_y, others_params FROM VTPTMT.bin_wafer_summary WHERE tester_id=?;
+DEBUG scheduling-1 druid.sql.ResultSet - {conn-110001, pstmt-120001, rs-150001} open
+DEBUG scheduling-1 druid.sql.ResultSet - {conn-110001, pstmt-120001, rs-150001} Header: [custom_code, device, lot_id, cp_step, wafer_no, oprator, tester_program, tester_id, prober_id, Prober_card_id, pid_name, pid_version, start_time, gross_die, pass_die, fail_die, yield, end_time, check_status, check_result, map_cols, map_rows, min_x, min_y, others_params]
+DEBUG scheduling-1 druid.sql.ResultSet - {conn-110001, pstmt-120001, rs-150001} Result: [PRA, P25Q21HAWF, AP1R042, CP2, AP1R042-03-F2, V100, V_PY1705V1B_P25Q21HAWF_25C_V02_00_CP2, TTH-28, PTL-06, P25Q11HA-C1C2-PC-01, PS_PRA_CP25Q21HAWF03, 1, 2020-04-03 18:41:45.0, 122156, 118600, 3556, 97.09, 2020-04-03 19:55:43.0, 0, normal, 402, 146, 3, 3, {"Customer Test Spec":"na","WaferID_read":"OCR","Index X(mm)":"742","Fab Device":"PY1705V2","WF_Size":"12","Map Reference":"(306,49);(101,358)","TestDieMinX":"6","Theory Test Time":"6.27","Retest Rate":"0","TestDieMinY":"6","Inner MotherLot":"PRAME05C09","Stop Yield":"88","Index Y(mm)":"742","shipLot":"AP1R042","Wafer_Sequence":"1-25","Lot Status":"1","Lot Start Time":"2020-01-29 22:32:54.973","Site To Site":"CP1:5;CP2:5;CP9:5","MES Stand Gross Die":"122156","Inner Lot":"PRAME05C09.01","Asy Device":"NA","Notch":"180-Degree","Sites":"64","Hold Count":"0","GPIB_Bin":"0","PE Owner":"Wales","MaxX":"405","MaxY":"404","Process Short Flow":"TB1-CP1-BK1-CP2-CP9-WV1-WP1-WPF","Is Trimed":"False","Process Yield":"NA|93.0000","OS Bins":"2","Slot":"3","Pass Bins":"1","Tester SoftWare Revision":"CRAFT_3380_2.40-SP7","Chines Short Name":"NA","Is OTP":"True","Assigned Testers":"NA","Wip Stage":"B","Prober Device":"PRA2N21HAXTNTCVA","PO Number":"M601-2001290003","Load File":"na","Special Bins":"na","DataBase":"TEL","Continue Fail":"10ea","TestDieMaxX":"401","TestDieMaxY":"401","MES Test Gross Die":"122156","CP Yields":"CP1&98.00%;CP2&97.09%;","RightID":"3","TestTime":"72","Tester Model":"Chroma","Major Fail":"na","Chinese Name":"普冉半导体(上海)股份有限公司","Part DESC":"V2.00 单定位片号规则","ALL CP Programs":"CP1T0:V_PY1705V1B_P25Q21HAWF_25C_V02_00_CP1;CP2T0:V_PY1705V1B_P25Q21HAWF_25C_V02_00_CP2;","Worker Order":"PRA20200129.222630_1","Wip Step":"CP2T0","customerNotch":"NA","Wafer PCS":"2","Is COP":"False","CTC PO Number":"NA"}]
+DEBUG scheduling-1 druid.sql.ResultSet - {conn-110001, pstmt-120001, rs-150001} closed
+DEBUG scheduling-1 druid.sql.Statement - {conn-110001, pstmt-120001} clearParameters. 
+DEBUG scheduling-1 druid.sql.Connection - {conn-110001} commited
+DEBUG scheduling-1 druid.sql.Connection - {conn-110001} setAutoCommit true
+DEBUG scheduling-1 druid.sql.Connection - {conn-110001} pool-recycle
