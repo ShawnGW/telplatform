@@ -1,6 +1,8 @@
 package com.vtest.it.telplatform.services.urlMesInformation;
 
 import com.vtest.it.telplatform.pojo.rawdataBean.RawdataInitBean;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +12,9 @@ import java.util.TreeMap;
 
 @Service
 public class WaferIdBinSummaryWrite {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(WaferIdBinSummaryWrite.class);
+
     private WaferidInforIntoMes waferidInforIntoMes;
 
     @Autowired
@@ -48,6 +53,8 @@ public class WaferIdBinSummaryWrite {
         SB.append("|TestStart:" + startTime);
         SB.append("|TestEnd:" + endTime);
         String summary = SB.toString();
+        LOGGER.info("Bin summary to mes:" + lot + "&" + waferId + "&" + cp + "&" + summary);
         waferidInforIntoMes.write(lot, waferId, cp, summary);
+        LOGGER.info("Bin summary to mes successfully");
     }
 }

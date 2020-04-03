@@ -267,7 +267,7 @@ public class TelProberMappingNormalParse {
 		properties.put("Index X(mm)", "NA");
 		properties.put("Index Y(mm)", "NA");
 		properties.put("Map Cols", String.valueOf(maxX-MinX+1));
-		properties.put("Map Rows", String.valueOf(Row_Sum));
+		properties.put("Map Rows", String.valueOf(maxY - MinY + 1));
 		properties.put("Notch", "NA");
 		properties.put("Retest Rate", "0");
 		properties.put("WF_Size", "NA");
