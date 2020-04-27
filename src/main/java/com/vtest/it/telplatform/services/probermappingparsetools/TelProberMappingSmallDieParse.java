@@ -8,18 +8,19 @@ import org.springframework.stereotype.Service;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
+import java.util.*;
 
+/**
+ * @author shawn.sun
+ * @date 2020.04.24
+ */
 @Service
 public class TelProberMappingSmallDieParse {
-
     @Autowired
     private GetRandomNumber getRandomNumber;
 
-    public void Get(File file, RawdataInitBean bean) throws IOException {
-//		LinkedHashMap<String,String> properties=new LinkedHashMap<>();
+    public void Get(File file, RawdataInitBean bean, boolean powerFlag) throws IOException {
+        Set<String> set = new HashSet<>();
         LinkedHashMap<String, String> properties = bean.getDataProperties();
         HashMap<Integer, HashMap<Integer, Integer>> siteBinSum = new HashMap<>();
         HashMap<String, String> testDieMap = new HashMap<>();
@@ -119,11 +120,16 @@ public class TelProberMappingSmallDieParse {
             }
             Integer DieStartIndex = index + 6;
             for (int i = 0; i < sum; i++) {
-                String Value = Integer.toHexString(bs[DieStartIndex] & 0xFF);
                 String key = String.format("%4s", Coordinate_X) + String.format("%4s", Coordinate_Y);
-                if (Value.equals("0")) {
+                String flag = Integer.toHexString(bs[DieStartIndex + 4] & 0xFF);
+                set.add(flag);
+                if ("d1".equals(flag) || "e0".equals(flag)) {
                     skipAndMarkDieMap.put(key, String.format("%4s", "M") + String.format("%4s", "M") + String.format("%4s", "0"));
                 } else {
+                    String valueFirst = Integer.toHexString(bs[DieStartIndex + 1] & 0xFF);
+                    String valueSecond = Integer.toHexString(bs[DieStartIndex] & 0xFF);
+                    String valueStr = valueFirst + (valueSecond.length() == 1 ? ("0" + valueSecond) : valueSecond);
+                    int valueTemp = Integer.parseInt(valueStr, 16);
                     if (testDieFlag) {
                         testDieMinX = Coordinate_X;
                         testDieMinY = Coordinate_Y;
@@ -143,7 +149,10 @@ public class TelProberMappingSmallDieParse {
                     if (testDieMaxY < Coordinate_Y) {
                         testDieMaxY = Coordinate_Y;
                     }
-                    Integer NumberValue = Integer.parseInt(Value, 16);
+                    Integer NumberValue = Integer.valueOf(valueTemp);
+                    if (powerFlag) {
+                        NumberValue = (int) (Math.log(valueTemp) / Math.log(2));
+                    }
                     if (Bin_summary_Map.containsKey(NumberValue)) {
                         Bin_summary_Map.put(NumberValue, Bin_summary_Map.get(NumberValue) + 1);
                     } else {
