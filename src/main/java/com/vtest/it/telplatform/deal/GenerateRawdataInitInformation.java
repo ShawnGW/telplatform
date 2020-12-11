@@ -23,6 +23,7 @@ import java.util.regex.Pattern;
 @Service
 public class GenerateRawdataInitInformation {
     private static final String CHROMAMODEL = "Chroma";
+    private static final String CHROMAMODEL_OTHER = "Chroma-3380P";
     Pattern pattern = Pattern.compile(";");
     @Autowired
     private InitMesConfigToRawdataProperties initMesConfigToRawdataProperties;
@@ -47,7 +48,7 @@ public class GenerateRawdataInitInformation {
             }else {
                 String testerModelConfig = mesConfigBean.getTesterModel().trim();
                 String currentProcessTesterModel = "others";
-                if (CHROMAMODEL.equals(testerModelConfig)) {
+                if (CHROMAMODEL.equals(testerModelConfig) || CHROMAMODEL_OTHER.equals(testerModelConfig)) {
                     currentProcessTesterModel = CHROMAMODEL;
                 } else if (testerModelConfig.contains(CHROMAMODEL)) {
                     try {

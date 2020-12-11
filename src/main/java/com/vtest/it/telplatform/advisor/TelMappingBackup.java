@@ -49,6 +49,7 @@ public class TelMappingBackup {
     private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     private SimpleDateFormat simpleDateFormatOthers = new SimpleDateFormat("yyMMddHHmm");
     private static final Logger LOGGER = LoggerFactory.getLogger(TelMappingBackup.class);
+
     @Around("execution(* com.vtest.it.telplatform.deal.TelPlatformDataDeal.deal(..))")
     public void MappingDeal(ProceedingJoinPoint proceedingJoinPoint) {
         ArrayList<DealWaferIdInformationBean> dealWaferIdInformationBeanArrayList = getDealList();
@@ -75,6 +76,11 @@ public class TelMappingBackup {
 
     public void smallDieBackup(File file, ArrayList<DealWaferIdInformationBean> dealWaferIdInformationBeanArrayList) {
         String lotName = file.getName();
+        SlotAndSequenceConfigBean slotAndSequenceConfigBean = getMesInfor.getLotSlotConfig(lotName);
+        boolean slotFlag = false;
+        if ("SLOT".equals(slotAndSequenceConfigBean.getReadType().toUpperCase())) {
+            slotFlag = true;
+        }
         CustomerCodeAndDeviceBean customerCodeAndDeviceBean = getMesInfor.getCustomerAndDeviceByLot(lotName);
         String customerCode = customerCodeAndDeviceBean.getCustomerCode();
         String device = customerCodeAndDeviceBean.getDevice();
@@ -121,7 +127,6 @@ public class TelMappingBackup {
             if (fileName.endsWith(".RMP")) {
                 mappingRmpFileList.add(files[i]);
                 mappingRmpFileNameList.add(fileName);
-                continue;
             }
         }
         HashMap<String, String> resultMapLot2 = null;
@@ -199,7 +204,7 @@ public class TelMappingBackup {
         for (File daFile : mappingDaFileList) {
             try {
                 Map<String, String> information = getFileInformaton(daFile.getName());
-                if (information.get("time").equals("1")) {
+                if ("1".equals(information.get("time"))) {
                     if (mappingDaFileNameList.contains(information.get("waferId") + "2" + information.get("suffix"))) {
                         continue;
                     } else {
@@ -209,7 +214,16 @@ public class TelMappingBackup {
                     perfectCopy.copy(daFile, new File(mapdown + lotName + "/" + getFileNameAfterModify(daFile.getName())));
                 }
                 String waferId = information.get("waferId");
-                String currentCpStep = getMesInfor.getCurrentCpStep(waferId);
+                String rightWaferId = waferId;
+                if (slotFlag) {
+                    try {
+                        String tempWaferId = getMesInfor.getWaferIdBySlot(lotName, waferId);
+                        rightWaferId = "NA".equals(tempWaferId) ? rightWaferId : tempWaferId;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+                String currentCpStep = getMesInfor.getCurrentCpStep(rightWaferId);
                 waferIdCurrentCpStep.put(waferId, currentCpStep);
                 HashMap<String, String> resultMap = telOpusProberMappingDaParse.GetResult(daFile);
                 File destFile = new File(backupPath + customerCode + "/" + device + "/" + lotName + "/" + currentCpStep + "/" + daFile.getName() + "_" + getDateString());
@@ -229,7 +243,7 @@ public class TelMappingBackup {
             dealWaferIdInformationBean.setNormalDieFlag(false);
             Map<String, String> information = getFileInformaton(rmpFile.getName());
             boolean isFileLaterExist = false;
-            if (information.get("time").equals("1")) {
+            if ("1".equals(information.get("time"))) {
                 if (mappingRmpFileNameList.contains(information.get("waferId") + "2" + information.get("suffix"))) {
                     isFileLaterExist = true;
                     continue;
@@ -240,16 +254,25 @@ public class TelMappingBackup {
                 perfectCopy.copy(rmpFile, new File(mapdown + lotName + "/" + getFileNameAfterModify(rmpFile.getName())));
             }
             String waferId = information.get("waferId");
-            String currentCpStep = waferIdCurrentCpStep.containsKey(waferId) ? waferIdCurrentCpStep.get(waferId) : getMesInfor.getCurrentCpStep(waferId);
+            String rightWaferId = waferId;
+            if (slotFlag) {
+                try {
+                    String tempWaferId = getMesInfor.getWaferIdBySlot(lotName, waferId);
+                    rightWaferId = "NA".equals(tempWaferId) ? rightWaferId : tempWaferId;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            String currentCpStep = waferIdCurrentCpStep.containsKey(waferId) ? waferIdCurrentCpStep.get(waferId) : getMesInfor.getCurrentCpStep(rightWaferId);
             RawdataInitBean rawdataInitBean = new RawdataInitBean();
 
             String operator = "V888";
-            if (information.get("time").equals("1") && null != lot1File) {
+            if ("1".equals(information.get("time")) && null != lot1File) {
                 operator = resultMapLot1.get("op");
-            } else if (information.get("time").equals("2") && null != lot2File) {
+            } else if ("2".equals(information.get("time")) && null != lot2File) {
                 operator = resultMapLot2.get("op");
             }
-            operator = operator.trim().equals("") ? "V888" : operator;
+            operator = "".equals(operator.trim()) ? "V888" : operator;
             File destFile = new File(backupPath + customerCode + "/" + device + "/" + lotName + "/" + currentCpStep + "/" + rmpFile.getName() + "_" + getDateString());
             try {
                 FileUtils.copyFile(rmpFile, destFile);
@@ -263,7 +286,7 @@ public class TelMappingBackup {
                 testStartTime = null == testStartTime ? simpleDateFormatOthers.format(new Date()) : testStartTime;
                 testEndTime = null == testEndTime ? simpleDateFormatOthers.format(new Date()) : testEndTime;
                 LinkedHashMap<String, String> dataProperties = new LinkedHashMap<>();
-                dataProperties.put("Wafer ID", waferId);
+                dataProperties.put("Wafer ID", rightWaferId);
                 dataProperties.put("Operator", operator);
                 dataProperties.put("CP Process", currentCpStep);
                 dataProperties.put("Test Start Time", testStartTime);
@@ -281,7 +304,7 @@ public class TelMappingBackup {
         String lotName = file.getName();
         SlotAndSequenceConfigBean slotAndSequenceConfigBean = getMesInfor.getLotSlotConfig(lotName);
         boolean slotFlag = false;
-        if (slotAndSequenceConfigBean.getReadType().toUpperCase().equals("SLOT")) {
+        if ("SLOT".equals(slotAndSequenceConfigBean.getReadType().toUpperCase())) {
             slotFlag = true;
         }
         CustomerCodeAndDeviceBean customerCodeAndDeviceBean = getMesInfor.getCustomerAndDeviceByLot(lotName);
